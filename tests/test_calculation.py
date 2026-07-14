@@ -59,23 +59,23 @@ def test_modulus_by_zero():
         Calculation(operation="Modulus", operand1=Decimal("8"), operand2=Decimal("0"))
 
 def test_int_divide():
-    calc = Calculation(operation="Int_divide", operand1=Decimal("3"), operand2=Decimal("2"))
+    calc = Calculation(operation="IntegerDivision", operand1=Decimal("3"), operand2=Decimal("2"))
     assert calc.result == Decimal("1")
 
 def test_int_divide_by_zero():
      with pytest.raises(OperationError, match="Division by zero is not allowed"):
-        Calculation(operation="Int_divide", operand1=Decimal("8"), operand2=Decimal("0"))
+        Calculation(operation="IntegerDivision", operand1=Decimal("8"), operand2=Decimal("0"))
 
 def test_percent():
-    calc = Calculation(operation="Percent", operand1=Decimal("4"), operand2=Decimal("8"))
+    calc = Calculation(operation="Percentage", operand1=Decimal("4"), operand2=Decimal("8"))
     assert calc.result == Decimal("50")
 
 def test_percent_by_zero():
      with pytest.raises(OperationError, match="Division by zero is not allowed"):
-        Calculation(operation="Percent", operand1=Decimal("8"), operand2=Decimal("0"))
+        Calculation(operation="Percentage", operand1=Decimal("8"), operand2=Decimal("0"))
 
 def test_abs_diff():
-    calc = Calculation(operation="Abs_diff", operand1=Decimal("4"), operand2=Decimal("8"))
+    calc = Calculation(operation="AbsoluteDifference", operand1=Decimal("4"), operand2=Decimal("8"))
     assert calc.result == Decimal("4")
 
 def test_unknown_operation():

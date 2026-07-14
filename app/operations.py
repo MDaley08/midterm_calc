@@ -297,7 +297,7 @@ class IntegerDivision(Operation):
         if b == 0:
             raise ValidationError("Division by zero is not allowed")
 
-    def execute(self, a: Decimal, b: Decimal) -> int:
+    def execute(self, a: Decimal, b: Decimal) -> Decimal:
         """
         Divide one number by another.
 
@@ -334,7 +334,7 @@ class Percentage(Operation):
         super().validate_operands(a, b)
         if b == 0:
             raise ValidationError("Division by zero is not allowed")
-    def execute(self, a: Decimal, b: Decimal) -> int:
+    def execute(self, a: Decimal, b: Decimal) -> Decimal:
         """
         calculate he percentage of one number in regard to another 
 

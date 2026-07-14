@@ -3,3 +3,7 @@
 __pycache__
 /history
 /logs
+.coverage
+coverage.*
+test_history
+test_logs
